@@ -3,6 +3,6 @@
 <% photoset %>
 
 <% photoset["items"].each do |photo| %>
-  <img src="<%=photo["media"]["m"]%>"
+  <img src="/thumb?photo_url=<%=photo["media"]["m"]%>"
   <br/>
 <% end %>
