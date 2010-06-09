@@ -7,7 +7,13 @@ end
 
 get "/thumb" do
   t = Thumbnail.new(params[:photo_url], 300, 300)
-  t.render
+
+  begin
+    t.read
+  rescue
+    Delayed::Job.enqueue t
+    halt 404
+  end
 end
 
 helpers do
