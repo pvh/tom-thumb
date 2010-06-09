@@ -1,6 +1,6 @@
 require 'json'
 require 'net/http'
-require 'rmagick'
+require 'RMagick'
 require 'uri'
 require 'open-uri'
 
