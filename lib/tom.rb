@@ -24,7 +24,7 @@ module MongoConnection
     db_url.split('/').last
   end
   def db_url
-    ENV['MONGO_URL'] || 'mongodb://localhost:localhost@localhost/test'
+    ENV['MONGOHQ_URL'] || 'mongodb://localhost:localhost@localhost/test'
   end
 end
 
