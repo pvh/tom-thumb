@@ -1,0 +1,8 @@
+<h1>O'Reilly Conf</h1>
+
+<% photoset %>
+
+<% photoset["items"].each do |photo| %>
+  <img src="<%=photo["media"]["m"]%>"
+  <br/>
+<% end %>
