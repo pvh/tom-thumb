@@ -1,6 +1,14 @@
 <h1>O'Reilly Conf - NOW WITH 100% MORE WORKER</h1>
 
-<% photoset["items"].each do |photo| %>
-  <img src="/thumb?photo_url=<%=photo["media"]["m"]%>"
-  <br/>
+<form name="input" action="" method="post">
+Flickr Image Set URL:
+<input type="text" name="feed_url" />
+<input type="submit" value="Submit" />
+</form>
+<% if params[:feed_url] %>
+  <p>Queued a fetch for <%= params[:feed_url] %></p>
+<% end %>
+
+<% Thumbnail.list.each do |photo_url| %>
+  <img src="/thumb?photo_url=<%=photo_url%>"/>
 <% end %>

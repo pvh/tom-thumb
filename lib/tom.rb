@@ -5,6 +5,7 @@ require 'uri'
 require 'open-uri'
 
 require 'lib/thumbnail'
+require 'lib/feed'
 
 require 'delayed_job'
 require 'mongo_mapper'
