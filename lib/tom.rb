@@ -4,3 +4,4 @@ require 'rmagick'
 require 'uri'
 require 'open-uri'
 
+require 'lib/thumbnail'

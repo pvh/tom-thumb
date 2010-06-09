@@ -1,4 +1,4 @@
-require 'lib/thumb'
+require 'lib/tom'
 require 'sinatra'
 
 get "/" do
@@ -6,10 +6,8 @@ get "/" do
 end
 
 get "/thumb" do
-  img = Magick::Image::from_blob(open(params[:photo_url]).read).first
-  img.crop!(params[:x].to_i, params[:y].to_i, params[:width].to_i, params[:width].to_i)
-  img.resize!(275, 275)
-  img.to_blob
+  t = Thumbnail.new(params[:photo_url], 300, 300)
+  t.render
 end
 
 helpers do
