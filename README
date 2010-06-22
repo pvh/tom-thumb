@@ -1,0 +1,14 @@
+Tom Thumb
+---------
+A simple Flickr thumbnailer.
+
+Installation Instructions
+=========================
+1. clone this repo
+2. heroku create --stack bamboo
+3. heroku addons:add mongohq
+4. git push heroku
+
+That should do it! If you have any trouble, questions, or suggestions on how to improve this example code, please don't hesitate to either post to the repo, or to email pvh@heroku.com.
+
+Enjoy!
